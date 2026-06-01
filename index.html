@@ -503,22 +503,33 @@
     color: var(--mdt);
     font-style: italic;
     line-height: 1.55;
-    padding: 0.6rem 0.75rem 0.75rem;
+    padding: 0 0.75rem;
     background: var(--esp-light);
     border-radius: 2px;
-    margin-bottom: 0.5rem;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.25s ease, margin-bottom 0.25s ease;
+    margin-bottom: 0;
   }
-  .ref-entry.open .ref-annotation { display: block; }
+  .ref-entry.open .ref-annotation {
+    max-height: 300px;
+    padding: 0.6rem 0.75rem 0.75rem;
+    margin-bottom: 0.5rem;
+  }
 
   .ref-note-flag {
     font-size: 0.75rem;
     color: #9B7E60;
     font-style: italic;
-    padding: 0 0.75rem 0.5rem;
-    display: none;
+    padding: 0 0.75rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.25s ease;
   }
-  .ref-entry.open .ref-note-flag { display: block; }
+  .ref-entry.open .ref-note-flag {
+    max-height: 60px;
+    padding: 0 0.75rem 0.5rem;
+  }
 
   /* ── FOOTER ── */
   .site-footer {
@@ -579,7 +590,7 @@
     <a href="#reflection">Reflect</a>
     <a href="#resources">Resources</a>
     <a href="#references">References</a>
-    <a href="https://dlr-group.github.io/Cultural-humility-LCDF/cultural_humility_handout_LCDF_v8.pdf" class="nav-download" target="_blank">↓ PDF</a>
+    <a href="https://dlr-group.github.io/Cultural-humility-LCDF/cultural_humility_handout_LCDF_FINAL.pdf" class="nav-download" target="_blank">↓ PDF</a>
   </div>
   <div class="nav-hamburger" id="hamburger" onclick="toggleNav()">
     <span></span><span></span><span></span>
@@ -592,7 +603,7 @@
   <h1>Cultural Humility<br>in SUD Care</h1>
   <div class="hero-meta">Participant Handout &nbsp;·&nbsp; Iván A. de la Rosa, Ph.D. &nbsp;·&nbsp; NMSU College of HEST</div>
   <div class="hero-actions">
-    <a href="https://dlr-group.github.io/Cultural-humility-LCDF/cultural_humility_handout_LCDF_v8.pdf" class="btn-primary" target="_blank">
+    <a href="https://dlr-group.github.io/Cultural-humility-LCDF/cultural_humility_handout_LCDF_FINAL.pdf" class="btn-primary" target="_blank">
       ↓ Download PDF
     </a>
     <a href="#framework" class="btn-secondary">
@@ -1016,7 +1027,7 @@
   <div class="section fade-in" style="text-align:center; border-bottom:none; padding-bottom: 3rem;">
     <div class="section-label" style="justify-content:center; display:flex;">Save for Later</div>
     <p style="font-size:0.9rem; color:var(--mdt); margin-bottom:1.25rem; max-width:400px; margin-left:auto; margin-right:auto;">Download the print-ready PDF version of this handout to keep as a reference.</p>
-    <a href="https://dlr-group.github.io/Cultural-humility-LCDF/cultural_humility_handout_LCDF_v8.pdf" class="btn-primary" target="_blank" style="display:inline-flex;">
+    <a href="https://dlr-group.github.io/Cultural-humility-LCDF/cultural_humility_handout_LCDF_FINAL.pdf" class="btn-primary" target="_blank" style="display:inline-flex;">
       ↓ Download PDF Handout
     </a>
   </div>
@@ -1035,7 +1046,7 @@
 <script>
   // Toggle reference annotations
   function toggleRef(row) {
-    const entry = row.parentElement;
+    const entry = row.closest(".ref-entry");
     entry.classList.toggle('open');
   }
 
