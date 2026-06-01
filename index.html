@@ -493,6 +493,14 @@
   /* ── FADE IN ── */
   .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
   .fade-in.visible { opacity: 1; transform: none; }
+
+  .doi-link {
+    color: var(--sge);
+    font-size: 0.78rem;
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .doi-link:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -728,7 +736,7 @@
         <div class="ref-entry highlight">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Tervalon, M., &amp; Murray-García, J. (1998). Cultural humility versus cultural competence. <em>Journal of Health Care for the Poor and Underserved, 9</em>(2), 117–125.</span>
+            <span class="ref-citation-text">Tervalon, M., &amp; Murray-García, J. (1998). Cultural humility versus cultural competence. <em>Journal of Health Care for the Poor and Underserved, 9</em>(2), 117–125. <a href="https://doi.org/10.1353/hpu.2010.0233" target="_blank" class="doi-link">https://doi.org/10.1353/hpu.2010.0233</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">The paper that coined the term. Argues that cultural competence frames culture as a checklist to master, while cultural humility positions it as a lifelong practice of self-reflection and power-sharing. Short, readable, and foundational. Start here if you only read one thing.</div>
@@ -736,7 +744,7 @@
         <div class="ref-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Metzl, J. M., &amp; Hansen, H. (2014). Structural competency: Theorizing a new medical engagement with stigma and inequality. <em>Social Science &amp; Medicine, 103</em>, 126–133.</span>
+            <span class="ref-citation-text">Metzl, J. M., &amp; Hansen, H. (2014). Structural competency: Theorizing a new medical engagement with stigma and inequality. <em>Social Science &amp; Medicine, 103</em>, 126–133. <a href="https://doi.org/10.1016/j.socscimed.2013.06.032" target="_blank" class="doi-link">https://doi.org/10.1016/j.socscimed.2013.06.032</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Introduces structural competency — the idea that what presents as a cultural or individual problem is often a structural one: poverty, housing, policy. Directly relevant to understanding why NM patients face the barriers they do. Pairs well with Tervalon.</div>
@@ -756,7 +764,7 @@
         <div class="ref-entry new-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Bagchi, A. D. (2020). A structural competency curriculum for primary care providers to address the OUD, HIV, and hepatitis C syndemic. <em>Frontiers in Public Health, 8</em>, 210.</span>
+            <span class="ref-citation-text">Bagchi, A. D. (2020). A structural competency curriculum for primary care providers to address the OUD, HIV, and hepatitis C syndemic. <em>Frontiers in Public Health, 8</em>, 210. <a href="https://doi.org/10.3389/fpubh.2020.00210" target="_blank" class="doi-link">https://doi.org/10.3389/fpubh.2020.00210</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Places Kleinman's explanatory model directly inside an OUD/MAT curriculum. Frames it as one of "four keys to structural humility." Highly relevant to MAT/MOUD providers. Open access, free to download.</div>
@@ -784,7 +792,7 @@
         <div class="ref-entry highlight">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Hook, J. N., et al. (2013). Cultural humility: Measuring openness to culturally diverse clients. <em>Journal of Counseling Psychology, 60</em>(3), 353–366.</span>
+            <span class="ref-citation-text">Hook, J. N., et al. (2013). Cultural humility: Measuring openness to culturally diverse clients. <em>Journal of Counseling Psychology, 60</em>(3), 353–366. <a href="https://doi.org/10.1037/a0032595" target="_blank" class="doi-link">https://doi.org/10.1037/a0032595</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">The study behind the r = .75 stat. Demonstrates that cultural humility — as perceived by clients — is one of the strongest predictors of therapeutic alliance, which in turn predicts treatment outcomes. Good for anyone who wants the empirical case, not just the ethical one.</div>
@@ -792,7 +800,7 @@
         <div class="ref-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Martin, D. J., Garske, J. P., &amp; Davis, M. K. (2000). Relation of the therapeutic alliance with outcome: A meta-analytic review. <em>Journal of Consulting and Clinical Psychology, 68</em>(3), 438–450.</span>
+            <span class="ref-citation-text">Martin, D. J., Garske, J. P., &amp; Davis, M. K. (2000). Relation of the therapeutic alliance with outcome: A meta-analytic review. <em>Journal of Consulting and Clinical Psychology, 68</em>(3), 438–450. <a href="https://doi.org/10.1037/0022-006X.68.3.438" target="_blank" class="doi-link">https://doi.org/10.1037/0022-006X.68.3.438</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Classic meta-analysis establishing therapeutic alliance as a robust outcome predictor across treatment modalities. Provides the foundation for why provider-patient relationship quality translates directly into clinical results.</div>
@@ -804,7 +812,7 @@
         <div class="ref-entry highlight">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Pronin, E., Lin, D. Y., &amp; Ross, L. (2002). The bias blind spot: Perceptions of bias in self versus others. <em>Personality and Social Psychology Bulletin, 28</em>(3), 369–381.</span>
+            <span class="ref-citation-text">Pronin, E., Lin, D. Y., &amp; Ross, L. (2002). The bias blind spot: Perceptions of bias in self versus others. <em>Personality and Social Psychology Bulletin, 28</em>(3), 369–381. <a href="https://doi.org/10.1177/0146167202286008" target="_blank" class="doi-link">https://doi.org/10.1177/0146167202286008</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">The foundational paper on the bias blind spot. Demonstrates that people consistently rate themselves as less susceptible to bias than their peers — because bias operates largely below conscious awareness. Directly supports why training increases awareness without eliminating bias.</div>
@@ -812,7 +820,7 @@
         <div class="ref-entry highlight">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">FitzGerald, C., &amp; Hurst, S. (2017). Implicit bias in healthcare professionals: A systematic review. <em>BMC Medical Ethics, 18</em>(1), 19.</span>
+            <span class="ref-citation-text">FitzGerald, C., &amp; Hurst, S. (2017). Implicit bias in healthcare professionals: A systematic review. <em>BMC Medical Ethics, 18</em>(1), 19. <a href="https://doi.org/10.1186/s12910-017-0179-8" target="_blank" class="doi-link">https://doi.org/10.1186/s12910-017-0179-8</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Healthcare providers exhibit the same levels of implicit bias as the wider population — and experts consistently underestimate their own bias. All studies that examined correlations found a positive association between provider bias and lower quality of care.</div>
@@ -820,7 +828,7 @@
         <div class="ref-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Stone, E. M., et al. (2021). The role of stigma in U.S. primary care physicians' treatment of opioid use disorder. <em>Drug and Alcohol Dependence, 221</em>, 108627.</span>
+            <span class="ref-citation-text">Stone, E. M., et al. (2021). The role of stigma in U.S. primary care physicians' treatment of opioid use disorder. <em>Drug and Alcohol Dependence, 221</em>, 108627. <a href="https://doi.org/10.1016/j.drugalcdep.2021.108627" target="_blank" class="doi-link">https://doi.org/10.1016/j.drugalcdep.2021.108627</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Documents how provider-held stigma toward SUD directly reduces willingness to prescribe MOUD. Strong empirical piece for clinical and administrative staff alike.</div>
@@ -828,7 +836,7 @@
         <div class="ref-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Kelly, J. F., &amp; Westerhoff, C. M. (2010). Does it matter how we refer to individuals with substance-related conditions? <em>International Journal of Drug Policy, 21</em>(3), 202–207.</span>
+            <span class="ref-citation-text">Kelly, J. F., &amp; Westerhoff, C. M. (2010). Does it matter how we refer to individuals with substance-related conditions? <em>International Journal of Drug Policy, 21</em>(3), 202–207. <a href="https://doi.org/10.1016/j.drugpo.2009.10.010" target="_blank" class="doi-link">https://doi.org/10.1016/j.drugpo.2009.10.010</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Shows experimentally that labeling someone "an abuser" vs. "a person with a substance use disorder" shifts clinician attitudes and treatment recommendations. The data behind attribution bias. Everyone on the team should read this one.</div>
@@ -836,7 +844,7 @@
         <div class="ref-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Dickson-Gomez, J., et al. (2022). "You're not supposed to be on it forever": MOUD-related stigma among drug treatment providers and people who use opioids. <em>Substance Abuse: Research and Treatment, 16.</em></span>
+            <span class="ref-citation-text">Dickson-Gomez, J., et al. (2022). "You're not supposed to be on it forever": MOUD-related stigma among drug treatment providers and people who use opioids. <em>Substance Abuse: Research and Treatment, 16.</em> <a href="https://doi.org/10.1177/11782218221105133" target="_blank" class="doi-link">https://doi.org/10.1177/11782218221105133</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Captures MOUD stigma from both provider and patient perspectives. The "trading one drug for another" belief is documented here in detail, alongside patient accounts of how that attitude affects willingness to stay in treatment.</div>
@@ -844,7 +852,7 @@
         <div class="ref-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Lagisetty, P. A., et al. (2019). Buprenorphine treatment divide by race/ethnicity and payment. <em>JAMA Psychiatry, 76</em>(9), 979–981.</span>
+            <span class="ref-citation-text">Lagisetty, P. A., et al. (2019). Buprenorphine treatment divide by race/ethnicity and payment. <em>JAMA Psychiatry, 76</em>(9), 979–981. <a href="https://doi.org/10.1001/jamapsychiatry.2019.0876" target="_blank" class="doi-link">https://doi.org/10.1001/jamapsychiatry.2019.0876</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">The data behind the 3× stat. Documents the racial and ethnic gap in buprenorphine access — Latino and Black patients receive it at significantly lower rates than white patients. Essential context for La Clínica's patient population.</div>
@@ -865,7 +873,7 @@
         <div class="ref-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Tsai, A. C., et al. (2019). Stigma as a fundamental hindrance to the United States opioid overdose crisis response. <em>PLOS Medicine, 16</em>(11), e1002969.</span>
+            <span class="ref-citation-text">Tsai, A. C., et al. (2019). Stigma as a fundamental hindrance to the United States opioid overdose crisis response. <em>PLOS Medicine, 16</em>(11), e1002969. <a href="https://doi.org/10.1371/journal.pmed.1002969" target="_blank" class="doi-link">https://doi.org/10.1371/journal.pmed.1002969</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Makes the argument that stigma operates as a structural barrier that undermines the entire policy and public health response to the opioid crisis. Good for understanding the systems-level picture.</div>
@@ -873,7 +881,7 @@
         <div class="ref-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Hansen, H., &amp; Netherland, J. (2016). Is the prescription opioid epidemic a white problem? <em>American Journal of Public Health, 106</em>(12), 2127–2129.</span>
+            <span class="ref-citation-text">Hansen, H., &amp; Netherland, J. (2016). Is the prescription opioid epidemic a white problem? <em>American Journal of Public Health, 106</em>(12), 2127–2129. <a href="https://doi.org/10.2105/AJPH.2016.303483" target="_blank" class="doi-link">https://doi.org/10.2105/AJPH.2016.303483</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Documents how framing the opioid epidemic as a "white, suburban" crisis shaped treatment access, public sympathy, and policy — at the expense of communities of color. Essential context for racial equity work in SUD.</div>
@@ -885,7 +893,7 @@
         <div class="ref-entry new-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Austin, E. J., et al. (2025). Experiences of team collaboration in primary care–based delivery of opioid use disorder treatment. <em>Journal of Behavioral Health Services &amp; Research.</em></span>
+            <span class="ref-citation-text">Austin, E. J., et al. (2025). Experiences of team collaboration in primary care–based delivery of opioid use disorder treatment. <em>Journal of Behavioral Health Services &amp; Research, 52</em>(4), 560–572. <a href="https://doi.org/10.1007/s11414-025-09946-2" target="_blank" class="doi-link">https://doi.org/10.1007/s11414-025-09946-2</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Qualitative study of 35 multidisciplinary primary care team members delivering OUD treatment. Shows that shared patient knowledge, mutual respect across roles, and informal connection between care managers and prescribers all strengthen patient engagement.</div>
@@ -893,7 +901,7 @@
         <div class="ref-entry new-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Wakeman, S., et al. (2019). Effect of integrating substance use disorder treatment into primary care on inpatient and emergency department utilization. <em>Journal of General Internal Medicine, 34</em>(6), 958–965.</span>
+            <span class="ref-citation-text">Wakeman, S., et al. (2019). Effect of integrating substance use disorder treatment into primary care on inpatient and emergency department utilization. <em>Journal of General Internal Medicine, 34</em>(6), 871–877. <a href="https://doi.org/10.1007/s11606-018-4807-x" target="_blank" class="doi-link">https://doi.org/10.1007/s11606-018-4807-x</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Shows that integrated addiction pharmacotherapy plus recovery coaching in primary care reduced ED visits and hospital days compared to referral-only models. Useful for making an administrative or policy case for integrated care investment.</div>
@@ -901,7 +909,7 @@
         <div class="ref-entry new-entry">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Jack, H., et al. (2018). Addressing substance use disorder in primary care: The role, integration, and impact of recovery coaches. <em>Substance Abuse, 39</em>(3), 307–314.</span>
+            <span class="ref-citation-text">Jack, H., et al. (2018). Addressing substance use disorder in primary care: The role, integration, and impact of recovery coaches. <em>Substance Abuse, 39</em>(3), 307–314. <a href="https://doi.org/10.1080/08897077.2017.1389802" target="_blank" class="doi-link">https://doi.org/10.1080/08897077.2017.1389802</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Documents four core recovery coach functions alongside a key tension: role ambiguity creates friction within care teams. Directly relevant to any setting where peer recovery staff work alongside clinical providers.</div>
@@ -913,7 +921,7 @@
         <div class="ref-entry highlight">
           <div class="ref-citation-row" onclick="toggleRef(this)">
             <span class="ref-badge badge-journal">Journal</span>
-            <span class="ref-citation-text">Scott, M. A., Andazola, J., Smith, T., Castillo Smith, A., de la Rosa, I., &amp; Michael, J. (2023). Structural competency in New Mexico: Moving outside of medical education. <em>Global Public Health, 18</em>(1), 2176003.</span>
+            <span class="ref-citation-text">Scott, M. A., Andazola, J., Smith, T., Castillo Smith, A., de la Rosa, I., &amp; Michael, J. (2023). Structural competency in New Mexico: Moving outside of medical education. <em>Global Public Health, 18</em>(1), 2176003. <a href="https://doi.org/10.1080/17441692.2023.2176003" target="_blank" class="doi-link">https://doi.org/10.1080/17441692.2023.2176003</a></span>
             <span class="ref-toggle">▾</span>
           </div>
           <div class="ref-annotation">Documents how two Doña Ana County organizations adapted the structural competency framework beyond medical education for strategic planning, community organizing, and state government. Co-authored by John Andazola and Iván de la Rosa.</div>
@@ -1006,13 +1014,22 @@
     navLinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
   });
 
-  // Mobile nav
+  // Nav links — expand target section then scroll to it
+  document.querySelectorAll('.nav-links a:not(.nav-download)').forEach(a => {
+    a.addEventListener('click', () => {
+      const targetId = a.getAttribute('href').replace('#', '');
+      const target = document.getElementById(targetId);
+      if (target && target.classList.contains('section') && !target.classList.contains('always-open')) {
+        target.classList.add('open');
+      }
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+
+  // Mobile nav toggle
   function toggleNav() {
     document.getElementById('navLinks').classList.toggle('open');
   }
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
-  });
 </script>
 </body>
 </html>
