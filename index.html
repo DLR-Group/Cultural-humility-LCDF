@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultural Humility in SUD Care — Participant Handout</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+
+  :root {
+    --esp: #3D2B1F;
+    --ter: #C4622D;
+    --crm: #F5EFE1;
+    --snd: #D9C5A0;
+    --sge: #7C9070;
+    --mdt: #6B4F3A;
+    --wht: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Sans 3', Georgia, sans-serif;
+    background: var(--crm);
+    color: var(--esp);
+    font-size: 9.5pt;
+    line-height: 1.45;
+  }
+
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0 auto;
+    background: var(--crm);
+    padding: 0.4in 0.48in 0.35in 0.48in;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 0.15in;
+  }
+  .header-accent {
+    width: 6px;
+    background: var(--ter);
+    flex-shrink: 0;
+    border-radius: 1px 0 0 1px;
+  }
+  .header-text {
+    background: var(--esp);
+    flex: 1;
+    padding: 0.12in 0.18in;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 13pt;
+    font-weight: 700;
+    color: var(--crm);
+    letter-spacing: 0.01em;
+  }
+  .header-meta {
+    text-align: right;
+    font-size: 7.5pt;
+    color: var(--snd);
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-size: 6.5pt;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ter);
+    margin-bottom: 0.05in;
+  }
+
+  /* ── ROW 1: FRAMEWORK + SHIFT ── */
+  .row1 {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 0.12in;
+    margin-bottom: 0.12in;
+  }
+
+  .framework-box {
+    background: var(--wht);
+    border: 1px solid var(--snd);
+    border-top: 3px solid var(--ter);
+    padding: 0.12in 0.14in;
+  }
+  .acts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.06in 0.1in;
+    margin-top: 0.05in;
+  }
+  .act-item {
+    border-left: 3px solid var(--snd);
+    padding-left: 0.08in;
+  }
+  .act-item.active { border-left-color: var(--ter); }
+  .act-num {
+    font-size: 6pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--snd);
+    line-height: 1.2;
+  }
+  .act-item.active .act-num { color: var(--ter); }
+  .act-name {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: var(--esp);
+    line-height: 1.2;
+    margin-bottom: 0.02in;
+  }
+  .act-quote {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 7.5pt;
+    font-style: italic;
+    color: var(--mdt);
+    line-height: 1.35;
+  }
+  .act-item.active .act-quote { color: var(--ter); }
+
+  .shift-box {
+    background: var(--esp);
+    padding: 0.12in 0.14in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.07in;
+  }
+  .shift-box .section-label { color: var(--snd); }
+  .shift-row { display: flex; flex-direction: column; gap: 0.02in; }
+  .shift-label {
+    font-size: 6.5pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--snd);
+  }
+  .shift-label.active { color: var(--ter); }
+  .shift-text {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 9pt;
+    font-style: italic;
+    color: var(--crm);
+    line-height: 1.4;
+  }
+  .shift-text.highlight { color: var(--snd); }
+  .shift-divider { height: 1px; background: var(--mdt); }
+
+  /* ── ROW 2: BIASES + KLEINMAN ── */
+  .row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.12in;
+    margin-bottom: 0.12in;
+  }
+
+  .biases-box {
+    background: var(--wht);
+    border: 1px solid var(--snd);
+    border-top: 3px solid var(--esp);
+    padding: 0.12in 0.14in;
+  }
+  .biases-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.05in 0.08in;
+    margin-top: 0.05in;
+  }
+  .bias-item {
+    padding: 0.06in 0.08in;
+    background: var(--crm);
+    border-left: 2px solid var(--ter);
+  }
+  .bias-name {
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--esp);
+    line-height: 1.2;
+    margin-bottom: 0.02in;
+  }
+  .bias-def {
+    font-size: 7.5pt;
+    color: var(--mdt);
+    line-height: 1.35;
+  }
+
+  .kleinman-box {
+    background: var(--wht);
+    border: 1px solid var(--snd);
+    border-top: 3px solid var(--sge);
+    padding: 0.12in 0.14in;
+  }
+  .kleinman-intro {
+    font-size: 8pt;
+    color: var(--mdt);
+    font-style: italic;
+    margin-bottom: 0.07in;
+    line-height: 1.4;
+  }
+  .kleinman-q {
+    font-size: 8.5pt;
+    color: var(--esp);
+    line-height: 1.4;
+    padding: 0.04in 0 0.04in 0.1in;
+    border-left: 2px solid var(--sge);
+    margin-bottom: 0.04in;
+  }
+  .kleinman-q:last-child { margin-bottom: 0; }
+  .kleinman-cite {
+    font-size: 7pt;
+    color: var(--snd);
+    font-style: italic;
+    margin-top: 0.06in;
+  }
+  .kleinman-tip {
+    font-size: 7.5pt;
+    color: var(--sge);
+    font-style: italic;
+    border-top: 1px solid var(--snd);
+    padding-top: 0.05in;
+    margin-top: 0.06in;
+    line-height: 1.4;
+  }
+
+  /* ── ROW 3 ── */
+  .row3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.1in;
+    margin-bottom: 0.12in;
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .col-box {
+    background: var(--wht);
+    border: 1px solid var(--snd);
+    padding: 0.11in 0.12in;
+  }
+  .col-box.stats-box { border-top: 3px solid var(--ter); }
+  .col-box.reflect-box { border-top: 3px solid var(--sge); }
+  .col-box.resources-box { border-top: 3px solid var(--mdt); }
+
+  .stat-item {
+    margin-bottom: 0.06in;
+    padding-bottom: 0.06in;
+    border-bottom: 1px solid var(--snd);
+  }
+  .stat-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .stat-number {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 15pt;
+    font-weight: 700;
+    color: var(--ter);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 7.5pt;
+    color: var(--mdt);
+    line-height: 1.35;
+    margin-top: 0.02in;
+  }
+
+  .reflect-q {
+    font-size: 8.5pt;
+    color: var(--esp);
+    line-height: 1.45;
+    margin-bottom: 0.06in;
+    padding-left: 0.09in;
+    border-left: 2px solid var(--sge);
+  }
+  .reflect-q:last-child { margin-bottom: 0; }
+
+  .res-item {
+    margin-bottom: 0.06in;
+    padding-bottom: 0.06in;
+    border-bottom: 1px solid var(--snd);
+    font-size: 8pt;
+    line-height: 1.4;
+  }
+  .res-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .res-label { font-weight: 700; color: var(--esp); display: block; }
+  .res-detail { color: var(--mdt); font-size: 7.5pt; }
+
+  /* ── FOOTER ── */
+  .footer {
+    border-top: 1px solid var(--snd);
+    padding-top: 0.07in;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .footer-contact {
+    font-size: 7.5pt;
+    color: var(--mdt);
+    font-weight: 600;
+  }
+  .footer-note {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 8pt;
+    font-style: italic;
+    color: var(--ter);
+    text-align: right;
+  }
+
+  /* ── ANNOTATED REFERENCES ── */
+  .references-section {
+    margin-top: 0.18in;
+    padding-top: 0.12in;
+    border-top: 2px solid var(--esp);
+  }
+  .references-section .section-label {
+    margin-bottom: 0.04in;
+    font-size: 7pt;
+    letter-spacing: 0.14em;
+  }
+  .ref-intro {
+    font-size: 7.5pt;
+    color: var(--mdt);
+    font-style: italic;
+    margin-bottom: 0.12in;
+    line-height: 1.5;
+  }
+  .ref-group {
+    margin-bottom: 0.13in;
+  }
+  .ref-group-title {
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mdt);
+    margin-bottom: 0.07in;
+    border-bottom: 1px solid var(--snd);
+    padding-bottom: 0.025in;
+  }
+  .ref-entry-block {
+    margin-bottom: 0.1in;
+    padding-left: 0.14in;
+    border-left: 2px solid var(--snd);
+  }
+  .ref-entry-block:last-child { margin-bottom: 0; }
+  .ref-entry-block.highlight-entry { border-left-color: var(--ter); }
+  .ref-entry-block.new-entry { border-left-color: var(--sge); }
+  .ref-citation {
+    font-size: 7pt;
+    color: var(--esp);
+    line-height: 1.55;
+    margin-bottom: 0.03in;
+  }
+  .ref-citation em { font-style: italic; }
+  .ref-annotation {
+    font-size: 7pt;
+    color: var(--mdt);
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .ref-type-badge {
+    display: inline-block;
+    font-size: 5.5pt;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.01in 0.05in;
+    border-radius: 2px;
+    margin-right: 0.04in;
+    vertical-align: middle;
+    line-height: 1.6;
+  }
+  .badge-journal { background: #E8DDD0; color: var(--mdt); }
+  .badge-book    { background: #D6E5D0; color: #4A6B40; }
+  .badge-web     { background: #D0DDE8; color: #3A5A70; }
+  .badge-report  { background: #E8E0D0; color: #6B5A3A; }
+  .ref-note-flag {
+    font-size: 6.5pt;
+    color: #9B7E60;
+    font-style: italic;
+    margin-top: 0.015in;
+  }
+  .ref-new-flag {
+    display: inline-block;
+    font-size: 5.5pt;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--sge);
+    margin-left: 0.05in;
+    vertical-align: middle;
+  }
+
+  @media print {
+    body { background: var(--crm); }
+    .page { width: 100%; padding: 0.35in 0.42in; min-height: unset; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-accent"></div>
+    <div class="header-text">
+      <div class="header-title">Cultural Humility in SUD Care</div>
+      <div class="header-meta">
+        La Clínica de Familia &nbsp;|&nbsp; June 3, 2026<br>
+        MAT/MOUD &amp; IOP Teams
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 1 -->
+  <div class="row1">
+    <div class="framework-box">
+      <div class="section-label">The Framework — Four Parts</div>
+      <div class="acts-grid">
+        <div class="act-item">
+          <div class="act-num">Part 1</div>
+          <div class="act-name">Cultural Competence</div>
+          <div class="act-quote">"I learn your culture to help you."</div>
+        </div>
+        <div class="act-item">
+          <div class="act-num">Part 2</div>
+          <div class="act-name">Cultural Humility</div>
+          <div class="act-quote">"I can't be the expert on your experience. You are."</div>
+        </div>
+        <div class="act-item">
+          <div class="act-num">Part 3</div>
+          <div class="act-name">Structural Competency</div>
+          <div class="act-quote">"What looks cultural is often structural."</div>
+        </div>
+        <div class="act-item active">
+          <div class="act-num">Part 4 — Clinical Encounter</div>
+          <div class="act-name">Explanatory Model</div>
+          <div class="act-quote">"So what is your story?"</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shift-box">
+      <div class="section-label">The Core Shift</div>
+      <div class="shift-row">
+        <span class="shift-label">Competence says</span>
+        <span class="shift-text">"I am an expert on your culture."</span>
+      </div>
+      <div class="shift-divider"></div>
+      <div class="shift-row">
+        <span class="shift-label active">Humility says</span>
+        <span class="shift-text highlight">"You are always the expert on your own experience."</span>
+      </div>
+      <div class="shift-divider"></div>
+      <div class="shift-row">
+        <span class="shift-label">Structure says</span>
+        <span class="shift-text">"The barriers are real — not personal failures."</span>
+      </div>
+      <div style="font-size:7pt; color:#8C6A50; font-style:italic; margin-top:0.04in;">Tervalon &amp; Murray-García (1998) &nbsp;·&nbsp; Metzl &amp; Hansen (2014)</div>
+    </div>
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="row2">
+    <div class="biases-box">
+      <div class="section-label">Six Provider Biases in MOUD/MAT Settings</div>
+      <div class="biases-grid">
+        <div class="bias-item">
+          <div class="bias-name">Stigma Bias</div>
+          <div class="bias-def">Viewing SUD as moral failure — directly reduces MOUD prescribing</div>
+        </div>
+        <div class="bias-item">
+          <div class="bias-name">Attribution Bias</div>
+          <div class="bias-def">"Abuser" in chart = 4× lower odds of OUD treatment plan</div>
+        </div>
+        <div class="bias-item">
+          <div class="bias-name">Therapeutic Pessimism</div>
+          <div class="bias-def">15–26% of SUD counselors hold stigmatizing beliefs about their own patients</div>
+        </div>
+        <div class="bias-item">
+          <div class="bias-name">MOUD-Specific Bias</div>
+          <div class="bias-def">Bias against the medication itself — "trading one drug for another"</div>
+        </div>
+        <div class="bias-item">
+          <div class="bias-name">Racial &amp; Ethnic Bias</div>
+          <div class="bias-def">Pro-White, anti-Black/Hispanic/Native bias documented in treatment decisions</div>
+        </div>
+        <div class="bias-item">
+          <div class="bias-name">Compassion Fatigue</div>
+          <div class="bias-def">Burnout leads to depersonalization — patients become cases, not people</div>
+        </div>
+      </div>
+      <div style="font-size:7pt; color:#8C6A50; font-style:italic; margin-top:0.06in;">Parish et al. (2025) · Carpenter et al. (2023) · Hall et al. (2015)</div>
+    </div>
+
+    <div class="kleinman-box">
+      <div class="section-label">Kleinman's Explanatory Model — Clinical Questions</div>
+      <div class="kleinman-intro">Ask before you interpret. These questions elicit the patient's illness narrative — their actual worldview, not your assumption about it.</div>
+      <div class="kleinman-q">What do you think caused your problem?</div>
+      <div class="kleinman-q">Why do you think it started when it did?</div>
+      <div class="kleinman-q">What do you think is happening inside your body?</div>
+      <div class="kleinman-q">How severe is it? How long do you think it will last?</div>
+      <div class="kleinman-q">What do you fear most about this condition?</div>
+      <div class="kleinman-q">What are the main problems this has caused you?</div>
+      <div class="kleinman-q">What kind of treatment do you think you should receive?</div>
+      <div class="kleinman-q">What results do you hope to receive from treatment?</div>
+      <div class="kleinman-tip">If a cultural concept feels relevant — <em>familismo</em>, <em>fatalismo</em>, <em>respeto</em> — wait for the patient to name it first. These questions will surface it. Don't apply it before they do.</div>
+      <div class="kleinman-cite">Kleinman, A. (1988). <em>The illness narratives.</em> Basic Books. &nbsp;·&nbsp; <a href="https://www.culturallyconnected.ca/" style="color:var(--snd); text-decoration:underline; font-style:italic;">culturallyconnected.ca</a></div>
+    </div>
+  </div>
+
+  <!-- ROW 3 -->
+  <div class="row3">
+    <div class="col-box stats-box">
+      <div class="section-label">Why This Matters Here</div>
+      <div class="stat-item">
+        <div class="stat-number">3×</div>
+        <div class="stat-label">Latino patients are up to 3× less likely to receive MOUD vs. white patients with comparable diagnoses</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">r = .75</div>
+        <div class="stat-label">Cultural humility predicts therapeutic alliance — the strongest outcome predictor across treatment types (Hook et al., 2013)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">68%</div>
+        <div class="stat-label">of NM overdose deaths involve opioids — NM ranks among the highest nationally</div>
+      </div>
+    </div>
+
+    <div class="col-box reflect-box">
+      <div class="section-label">Post-Encounter Self-Reflection</div>
+      <div class="reflect-q">Did I make any assumptions about this patient before they spoke — and did I check them?</div>
+      <div class="reflect-q">Did this patient feel like they had authority in this encounter?</div>
+      <div class="reflect-q">Which of the six biases might have been active for me today?</div>
+      <div class="reflect-q">Was there a moment I felt uncomfortable — and did I move toward it or away from it?</div>
+      <div class="reflect-q">What would I do differently next time?</div>
+    </div>
+
+    <div class="col-box resources-box">
+      <div class="section-label">Resources</div>
+      <div class="res-item">
+        <span class="res-label">SAMHSA TIP 59</span>
+        <span class="res-detail">Improving cultural competence in SUD treatment. Free: <em>store.samhsa.gov</em></span>
+      </div>
+      <div class="res-item">
+        <span class="res-label">NM Dept. of Health</span>
+        <span class="res-detail">Opioid resources: <em>nmhealth.org/about/phd/idb/opip/</em></span>
+      </div>
+      <div class="res-item">
+        <span class="res-label">Project ECHO / UNM</span>
+        <span class="res-detail">Rural MOUD provider mentorship: <em>hsc.unm.edu/echo</em></span>
+      </div>
+      <div class="res-item">
+        <span class="res-label">Implicit Association Test</span>
+        <span class="res-detail">Self-assessment for implicit bias: <em>implicit.harvard.edu</em></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANNOTATED REFERENCES -->
+  <div class="references-section">
+    <div class="section-label">Annotated References — Further Reading</div>
+    <div class="ref-intro">Each entry includes a brief note on what it covers and who will find it most useful. Read what fits your role and curiosity — you don't need to read everything.</div>
+
+    <div class="ref-group">
+      <div class="ref-group-title">Foundational Frameworks</div>
+
+      <div class="ref-entry-block highlight-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Tervalon, M., &amp; Murray-García, J. (1998). Cultural humility versus cultural competence: A critical distinction in defining physician training outcomes in multicultural education. <em>Journal of Health Care for the Poor and Underserved, 9</em>(2), 117–125. https://doi.org/10.1353/hpu.2010.0233
+        </div>
+        <div class="ref-annotation">The paper that coined the term. Argues that cultural competence frames culture as a checklist to master, while cultural humility positions it as a lifelong practice of self-reflection and power-sharing. Short, readable, and foundational. Start here if you only read one thing.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Metzl, J. M., &amp; Hansen, H. (2014). Structural competency: Theorizing a new medical engagement with stigma and inequality. <em>Social Science &amp; Medicine, 103</em>, 126–133. https://doi.org/10.1016/j.socscimed.2013.06.032
+        </div>
+        <div class="ref-annotation">Introduces structural competency — the idea that what presents as a cultural or individual problem is often a structural one: poverty, housing, policy. Directly relevant to understanding why NM patients face the barriers they do. Pairs well with Tervalon.</div>
+      </div>
+    </div>
+
+    <div class="ref-group">
+      <div class="ref-group-title">Kleinman's Explanatory Model <span class="ref-new-flag">&#9679; 3 sources added</span></div>
+
+      <div class="ref-entry-block highlight-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-book">Book</span>
+          Kleinman, A. (1988). <em>The illness narratives: Suffering, health, and the human condition.</em> Basic Books.
+        </div>
+        <div class="ref-annotation">The primary source for the eight questions on this handout. Kleinman draws a foundational distinction between <em>disease</em> (the biomedical explanation) and <em>illness</em> (the patient's lived experience of it). Chapters 1–3 give you the core framework. Dense but worth it if this practice interests you.</div>
+      </div>
+
+      <div class="ref-entry-block new-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Bagchi, A. D. (2020). A structural competency curriculum for primary care providers to address the opioid use disorder, HIV, and hepatitis C syndemic. <em>Frontiers in Public Health, 8</em>, 210. https://doi.org/10.3389/fpubh.2020.00210
+        </div>
+        <div class="ref-annotation">Places Kleinman's explanatory model directly inside an OUD/MAT curriculum. Frames it as one of "four keys to structural humility" — asking real questions you don't already know the answer to. Highly relevant to MAT/MOUD providers. Open access, free to download.</div>
+      </div>
+
+      <div class="ref-entry-block new-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-web">Web</span>
+          Miyagawa, L. A. (2020, March 16). <em>Practicing cultural humility when serving immigrant and refugee communities.</em> EthnoMed. https://ethnomed.org
+        </div>
+        <div class="ref-annotation">The most accessible entry point to Kleinman's eight questions. Written for clinicians, not researchers. Explains how becoming a "learner" through these questions changes the patient-provider dynamic. Read this first if the book feels like too much.</div>
+      </div>
+
+      <div class="ref-entry-block new-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-report">Report</span>
+          Substance Abuse and Mental Health Services Administration. (2014). <em>Improving cultural competence.</em> Treatment Improvement Protocol (TIP) Series No. 59 (HHS Publication No. SMA 14-4849). SAMHSA. https://store.samhsa.gov
+        </div>
+        <div class="ref-annotation">Shows how Kleinman's questions get operationalized in SUD practice through intake tools like the LEARN and RESPECT mnemonics. Practical and grounded in substance use treatment settings. Free download. Especially useful for intake staff and counselors.</div>
+      </div>
+    </div>
+
+    <div class="ref-group">
+      <div class="ref-group-title">Cultural Humility and Clinical Outcomes</div>
+
+      <div class="ref-entry-block highlight-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Hook, J. N., Davis, D. E., Owen, J., Worthington, E. L., Jr., &amp; Utsey, S. O. (2013). Cultural humility: Measuring openness to culturally diverse clients. <em>Journal of Counseling Psychology, 60</em>(3), 353–366. https://doi.org/10.1037/a0032595
+        </div>
+        <div class="ref-annotation">The study behind the r = .75 stat on this handout. Demonstrates that cultural humility — as perceived by clients — is one of the strongest predictors of therapeutic alliance, which in turn predicts treatment outcomes. Good for anyone who wants the empirical case, not just the ethical one.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Martin, D. J., Garske, J. P., &amp; Davis, M. K. (2000). Relation of the therapeutic alliance with outcome and other variables: A meta-analytic review. <em>Journal of Consulting and Clinical Psychology, 68</em>(3), 438–450. https://doi.org/10.1037/0022-006X.68.3.438
+        </div>
+        <div class="ref-annotation">Classic meta-analysis establishing therapeutic alliance as a robust outcome predictor across treatment modalities. Provides the foundation for why provider-patient relationship quality — and the cultural humility that builds it — translates directly into clinical results.</div>
+      </div>
+    </div>
+
+    <div class="ref-group">
+      <div class="ref-group-title">Stigma and Implicit Bias in SUD Care</div>
+
+      <div class="ref-entry-block highlight-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Pronin, E., Lin, D. Y., &amp; Ross, L. (2002). The bias blind spot: Perceptions of bias in self versus others. <em>Personality and Social Psychology Bulletin, 28</em>(3), 369–381. https://doi.org/10.1177/0146167202286008
+        </div>
+        <div class="ref-annotation">The foundational paper on the bias blind spot — the term originates here. Demonstrates that people consistently rate themselves as less susceptible to bias than their peers, and identifies the mechanism: when assessing others we use abstract theories about bias, but when assessing ourselves we rely on introspection. Because bias operates largely below conscious awareness, that internal search comes up empty — and the absence of evidence gets read as evidence of objectivity. Directly supports the claim on slide 12 that training increases awareness of the blind spot without eliminating it.</div>
+      </div>
+
+      <div class="ref-entry-block highlight-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          FitzGerald, C., &amp; Hurst, S. (2017). Implicit bias in healthcare professionals: A systematic review. <em>BMC Medical Ethics, 18</em>(1), 19. https://doi.org/10.1186/s12910-017-0179-8
+        </div>
+        <div class="ref-annotation">Systematic review of implicit bias across healthcare professional groups. Key finding: healthcare providers exhibit the same levels of implicit bias as the wider population — and experts consistently underestimate their own bias while endorsing ineffective mitigation strategies. This is the healthcare-specific evidence behind the slide 12 claim. All studies that examined correlations found a positive association between provider bias and lower quality of care. This is the citation to use when making the case to clinical staff that awareness training is necessary but not sufficient.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Stone, E. M., Kennedy-Hendricks, A., Barry, C. L., Bachhuber, M. A., &amp; McGinty, E. E. (2021). The role of stigma in U.S. primary care physicians' treatment of opioid use disorder. <em>Drug and Alcohol Dependence, 221</em>, 108627. https://doi.org/10.1016/j.drugalcdep.2021.108627
+        </div>
+        <div class="ref-annotation">Documents how provider-held stigma toward SUD directly reduces willingness to prescribe MOUD. Useful for anyone who wants to understand the mechanism linking stigma to treatment gaps. Strong empirical piece for clinical and administrative staff alike.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Kelly, J. F., &amp; Westerhoff, C. M. (2010). Does it matter how we refer to individuals with substance-related conditions? <em>International Journal of Drug Policy, 21</em>(3), 202–207. https://doi.org/10.1016/j.drugpo.2009.10.010
+        </div>
+        <div class="ref-annotation">Short and convincing. Shows experimentally that labeling someone "an abuser" versus "a person with a substance use disorder" shifts clinician attitudes and treatment recommendations. The data behind attribution bias. Everyone on the team should read this one.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Sarpong Boateng, J., et al. (2024). Occurrence of stigmatizing documentation among hospital medicine encounters with opioid-related diagnosis codes: Cohort study. <em>JMIR</em>, PMC11544335.
+        </div>
+        <div class="ref-annotation">Examines how stigmatizing language shows up in clinical documentation for patients with OUD. Directly relevant to administrative and nursing staff who chart. The data is sobering — and actionable.</div>
+        <div class="ref-note-flag">Note: Core finding verified; confirm volume/issue via PubMed before formal citation.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Avery, J., et al. (2019). [Counselor stigmatizing beliefs toward patients with SUD.] <em>Substance Abuse.</em>
+        </div>
+        <div class="ref-annotation">Documents that 15–26% of SUD counselors hold stigmatizing beliefs about their own patients. If you work in SUD counseling and want to sit with that number honestly, this is the paper to read.</div>
+        <div class="ref-note-flag">Note: Volume and issue numbers not confirmed — verify via PubMed before formal citation.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Dickson-Gomez, J., Spector, A., Weeks, M., et al. (2022). "You're not supposed to be on it forever": MOUD-related stigma among drug treatment providers and people who use opioids. <em>Substance Abuse: Research and Treatment, 16.</em> https://doi.org/10.1177/11782218221105133
+        </div>
+        <div class="ref-annotation">Captures MOUD stigma from both provider and patient perspectives. The "trading one drug for another" belief is documented here in detail, alongside patient accounts of how that attitude affects their willingness to stay in treatment. Directly relevant to this team's work.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Lagisetty, P. A., Ross, R., Bohnert, A., Pierce, M., &amp; Piette, J. D. (2019). Buprenorphine treatment divide by race/ethnicity and payment. <em>JAMA Psychiatry, 76</em>(9), 979–981. https://doi.org/10.1001/jamapsychiatry.2019.0876
+        </div>
+        <div class="ref-annotation">The data behind the 3× stat on this handout. Documents the racial and ethnic gap in buprenorphine access — Latino and Black patients with OUD receive it at significantly lower rates than white patients. Short JAMA piece, high impact. Essential context for La Clínica's patient population.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Bride, B. E., et al. (2007). [Secondary traumatic stress and compassion fatigue in SUD counselors.] <em>Journal of Substance Abuse Treatment.</em>
+        </div>
+        <div class="ref-annotation">Compassion fatigue in SUD counselors leads to depersonalization — the clinical version of no longer seeing patients as people. If you recognize yourself in "burnout bias," start here. Also useful for supervisors thinking about staff support structures.</div>
+        <div class="ref-note-flag">Note: Volume and issue numbers not confirmed — verify via PubMed before formal citation.</div>
+      </div>
+    </div>
+
+    <div class="ref-group">
+      <div class="ref-group-title">Structural and Epidemiological Context</div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Tsai, A. C., et al. (2019). Stigma as a fundamental hindrance to the United States opioid overdose crisis response. <em>PLOS Medicine, 16</em>(11), e1002969. https://doi.org/10.1371/journal.pmed.1002969
+        </div>
+        <div class="ref-annotation">Makes the argument that stigma operates as a structural barrier — not just an interpersonal one — that undermines the entire policy and public health response to the opioid crisis. Broader scope than most clinical papers. Good for understanding the systems-level picture.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Hansen, H., &amp; Netherland, J. (2016). Is the prescription opioid epidemic a white problem? <em>American Journal of Public Health, 106</em>(12), 2127–2129. https://doi.org/10.2105/AJPH.2016.303483
+        </div>
+        <div class="ref-annotation">Documents how framing the opioid epidemic as a "white, suburban" crisis shaped treatment access, public sympathy, and policy — at the expense of communities of color. Short but sharp. Essential context for racial equity work in SUD.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Joffe, M. E., et al. (2026). The need to incorporate polysubstance use in neuropsychopharmacology research. <em>Addiction Neuroscience, 18</em>, 100246. https://doi.org/10.1016/j.addicn.2025.100246
+        </div>
+        <div class="ref-annotation">Argues that SUD research isolates single substances while patients typically use multiple. Directly relevant to NM's clinical reality where polysubstance use is common. Useful for providers thinking about treatment complexity and individualized care planning.</div>
+      </div>
+    </div>
+
+    <div class="ref-group">
+      <div class="ref-group-title">Interdisciplinary Team-Based SUD Care</div>
+
+      <div class="ref-entry-block new-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Austin, E. J., et al. (2025). Experiences of team collaboration in primary care–based delivery of opioid use disorder treatment. <em>Journal of Behavioral Health Services &amp; Research.</em> https://doi.org/10.1007/s11414-025-09946-2
+        </div>
+        <div class="ref-annotation">Qualitative study of 35 multidisciplinary primary care team members delivering OUD treatment. Shows that shared patient knowledge, mutual respect across roles, and informal connection between care managers and prescribers all strengthen patient engagement. Speaks directly to what makes teams like LCDF's work.</div>
+      </div>
+
+      <div class="ref-entry-block new-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Wakeman, S., et al. (2019). Effect of integrating substance use disorder treatment into primary care on inpatient and emergency department utilization. <em>Journal of General Internal Medicine, 34</em>(6), 958–965. https://doi.org/10.1007/s11606-018-4807-x
+        </div>
+        <div class="ref-annotation">Retrospective cohort study showing that integrated addiction pharmacotherapy plus recovery coaching in primary care reduced ED visits and hospital days compared to referral-only models. The utilization data is useful for making an administrative or policy case for integrated care investment.</div>
+      </div>
+
+      <div class="ref-entry-block new-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Lagisetty, P., et al. (2017). Primary care models for treating opioid use disorders: What actually works? A systematic review. <em>PLOS ONE, 12</em>(10), e0186315. https://doi.org/10.1371/journal.pone.0186315
+        </div>
+        <div class="ref-annotation">Systematic review of 35 interventions across 8 countries. Finds that multidisciplinary models combining specialty addiction services with primary care are the most effective structure for expanding MOUD access. The team composition findings — nurses, pharmacists, and care managers as clinical leads — are worth attention for anyone thinking about role design.</div>
+      </div>
+
+      <div class="ref-entry-block new-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Jack, H., et al. (2018). Addressing substance use disorder in primary care: The role, integration, and impact of recovery coaches. <em>Substance Abuse, 39</em>(3), 307–314. https://doi.org/10.1080/08897077.2017.1389802
+        </div>
+        <div class="ref-annotation">Qualitative study of recovery coaches and their patients in primary care. Documents four core RC functions — system navigation, behavior change support, harm reduction, and relationship building — alongside a key tension: role ambiguity creates friction within care teams. Directly relevant to any setting where peer recovery staff work alongside clinical providers.</div>
+      </div>
+    </div>
+
+    <div class="ref-group">
+      <div class="ref-group-title">New Mexico and Borderlands Context</div>
+
+      <div class="ref-entry-block highlight-entry">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-journal">Journal</span>
+          Scott, M. A., Andazola, J., Smith, T., Castillo Smith, A., de la Rosa, I., &amp; Michael, J. (2023). Structural competency in New Mexico: Moving outside of medical education. <em>Global Public Health, 18</em>(1), 2176003. https://doi.org/10.1080/17441692.2023.2176003
+        </div>
+        <div class="ref-annotation">Documents how two Doña Ana County organizations — the Doña Ana Wellness Institute and NM Human Services Department — adapted the structural competency framework beyond medical education for use in strategic planning, community organizing, and state government. Directly relevant to slide 15: this is the published work behind the "structural competency extended to Doña Ana County health councils and state agencies" footnote. Co-authored by John Andazola and Iván de la Rosa.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-report">Report</span>
+          New Mexico Legislature, Legislative Finance Committee. (2023). <em>Addressing substance use disorders.</em>
+        </div>
+        <div class="ref-annotation">State-level policy brief documenting NM's SUD landscape, funding, and gaps. Useful for understanding the policy context your work operates within, and for making the case for resources and systemic change internally.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-report">Report</span>
+          HRSA. <em>Enhancing rural access to medications for opioid use disorder.</em>
+        </div>
+        <div class="ref-annotation">Federal report addressing the rural MOUD access gap. Relevant to La Clínica's service area and the geographic barriers patients face in reaching treatment. Useful for administrators and care coordinators.</div>
+      </div>
+
+      <div class="ref-entry-block">
+        <div class="ref-citation">
+          <span class="ref-type-badge badge-report">Report</span>
+          Project ECHO, UNM. <em>Breaking the cycle: Expanding opioid treatment in New Mexico.</em>
+        </div>
+        <div class="ref-annotation">Documents UNM's Project ECHO model for expanding MOUD access through provider mentorship and telementoring. Directly applicable if La Clínica is looking to expand provider capacity or connect with state-level training infrastructure.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-contact">
+      Iván A. de la Rosa, Ph.D. &nbsp;|&nbsp; NMSU College of HEST &nbsp;|&nbsp; lilo@nmsu.edu
+    </div>
+    <div class="footer-note">Not a training you complete — a practice you return to.</div>
+  </div>
+
+</div>
+</body>
+</html>
