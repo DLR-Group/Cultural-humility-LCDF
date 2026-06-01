@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies — Cultural Humility in SUD Care</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+
+  :root {
+    --esp: #3D2B1F;
+    --ter: #C4622D;
+    --crm: #F5EFE1;
+    --snd: #D9C5A0;
+    --sge: #7C9070;
+    --mdt: #6B4F3A;
+    --wht: #FFFFFF;
+    --card1: #C4622D;
+    --card2: #7C9070;
+    --card3: #6B4F3A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', Georgia, sans-serif;
+    background: var(--crm);
+    color: var(--esp);
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--esp);
+    padding: 1.1rem 1.4rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--ter);
+  }
+  .site-header-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .site-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--crm);
+  }
+  .site-meta {
+    font-size: 0.72rem;
+    color: var(--snd);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .instruction {
+    background: var(--snd);
+    padding: 0.6rem 1.4rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--mdt);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 1.4rem 1.2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--wht);
+    border: 1px solid var(--snd);
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(61,43,31,0.07);
+    transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: 0 4px 16px rgba(61,43,31,0.12); }
+
+  /* Card title row — always visible, tappable */
+  .card-header {
+    display: flex;
+    align-items: stretch;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .card-accent { width: 5px; flex-shrink: 0; }
+  .card-1 .card-accent { background: var(--card1); }
+  .card-2 .card-accent { background: var(--card2); }
+  .card-3 .card-accent { background: var(--card3); }
+
+  .card-header-text {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .card-label-wrap { flex: 1; }
+  .card-number {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.18rem;
+  }
+  .card-1 .card-number { color: var(--card1); }
+  .card-2 .card-number { color: var(--card2); }
+  .card-3 .card-number { color: var(--card3); }
+
+  .card-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--esp);
+    line-height: 1.2;
+  }
+
+  .toggle-icon {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, transform 0.25s ease;
+    border: 1.5px solid var(--snd);
+    color: var(--mdt);
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .card.open .toggle-icon { transform: rotate(45deg); }
+  .card-1.open .toggle-icon { background: var(--card1); border-color: var(--card1); color: white; }
+  .card-2.open .toggle-icon { background: var(--card2); border-color: var(--card2); color: white; }
+  .card-3.open .toggle-icon { background: var(--card3); border-color: var(--card3); color: white; }
+
+  /* Card body */
+  .card-body {
+    display: none;
+    border-top: 1px solid var(--snd);
+  }
+  .card.open .card-body {
+    display: block;
+    animation: fadeIn 0.22s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SCENARIO — always visible once card opens ── */
+  .scenario {
+    padding: 1.1rem 1.2rem;
+    background: var(--crm);
+  }
+  .section-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mdt);
+    margin-bottom: 0.5rem;
+  }
+  .scenario-text {
+    font-size: 0.93rem;
+    line-height: 1.65;
+    color: var(--esp);
+  }
+
+  /* ── DISCUSSION PROMPTS TOGGLE ROW ── */
+  .prompts-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.2rem;
+    border-top: 1px solid var(--snd);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    background: var(--wht);
+    transition: background 0.12s ease;
+  }
+  .prompts-toggle:hover { background: var(--crm); }
+
+  .prompts-toggle-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mdt);
+  }
+  .card.prompts-open .prompts-toggle-label { color: var(--esp); }
+
+  .prompts-chevron {
+    font-size: 0.65rem;
+    color: var(--snd);
+    transition: transform 0.2s ease;
+  }
+  .card.prompts-open .prompts-chevron { transform: rotate(90deg); }
+
+  /* ── QUESTIONS — revealed together ── */
+  .questions-body {
+    display: none;
+    border-top: 1px solid var(--snd);
+    padding: 0.9rem 1.2rem 1rem;
+    background: var(--wht);
+  }
+  .card.prompts-open .questions-body {
+    display: block;
+    animation: fadeIn 0.2s ease;
+  }
+
+  .q-item {
+    display: flex;
+    gap: 0.8rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--snd);
+  }
+  .q-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .q-item:first-child { padding-top: 0; }
+
+  .q-num {
+    flex-shrink: 0;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.22rem;
+    width: 1rem;
+    text-align: right;
+  }
+  .card-1 .q-num { color: var(--card1); }
+  .card-2 .q-num { color: var(--card2); }
+  .card-3 .q-num { color: var(--card3); }
+
+  .q-text {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.92rem;
+    font-style: italic;
+    color: var(--esp);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    text-align: center;
+    padding: 1.2rem 1.4rem 2rem;
+    font-size: 0.75rem;
+    color: var(--mdt);
+    border-top: 1px solid var(--snd);
+    line-height: 1.7;
+  }
+  .site-footer strong { color: var(--esp); font-weight: 700; }
+
+  @media (max-width: 420px) {
+    .site-title { font-size: 0.92rem; }
+    .card-title { font-size: 1rem; }
+    .scenario-text, .q-text { font-size: 0.88rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <div class="site-title">Cultural Humility in SUD Care</div>
+    <div class="site-meta">La Clínica de Familia &nbsp;·&nbsp; June 3, 2026</div>
+  </div>
+</header>
+
+<div class="instruction">Select a case study &nbsp;·&nbsp; Read the scenario &nbsp;·&nbsp; Open the discussion prompts when ready</div>
+
+<main class="container">
+
+  <!-- ═══ CARD 1 ═══ -->
+  <div class="card card-1" id="card-1">
+    <div class="card-header" onclick="toggleCard('card-1')">
+      <div class="card-accent"></div>
+      <div class="card-header-text">
+        <div class="card-label-wrap">
+          <div class="card-number">Case Study 1 of 3</div>
+          <div class="card-title">Disclosure and Trauma</div>
+        </div>
+        <div class="toggle-icon">+</div>
+      </div>
+    </div>
+    <div class="card-body">
+
+      <div class="scenario">
+        <div class="section-label">The Scenario</div>
+        <div class="scenario-text">
+          A patient on buprenorphine for six months discloses at his monthly check-in that he used over the weekend. He found out on Friday that his partner was detained by immigration authorities. He is sitting quietly, waiting to see how you react. He is US-born; his partner is undocumented. He is now the sole income earner for two children, ages 7 and 10.
+          <br><br>
+          His chart includes a note from a previous provider written three months ago: <em>"motivation questionable — inconsistent engagement."</em> That note was written before the detention. It will be visible to every provider who opens his chart.
+        </div>
+      </div>
+
+      <div class="prompts-toggle" onclick="togglePrompts('card-1')">
+        <span class="prompts-toggle-label">Discussion Prompts</span>
+        <span class="prompts-chevron">▶</span>
+      </div>
+
+      <div class="questions-body">
+        <div class="q-item">
+          <span class="q-num">1</span>
+          <span class="q-text">The fact that he disclosed is significant — what does it tell you about the relationship, and what does a culturally humble response look like right now?</span>
+        </div>
+        <div class="q-item">
+          <span class="q-num">2</span>
+          <span class="q-text">He used, and he told you why. How does knowing the context change what this moment means — and what does it change about how you respond?</span>
+        </div>
+        <div class="q-item">
+          <span class="q-num">3</span>
+          <span class="q-text">If this conversation surfaces strong feelings for you about immigration — for or against — how do you stay present with the patient in front of you?</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ CARD 2 ═══ -->
+  <div class="card card-2" id="card-2">
+    <div class="card-header" onclick="toggleCard('card-2')">
+      <div class="card-accent"></div>
+      <div class="card-header-text">
+        <div class="card-label-wrap">
+          <div class="card-number">Case Study 2 of 3</div>
+          <div class="card-title">The Session After Trust</div>
+        </div>
+        <div class="toggle-icon">+</div>
+      </div>
+    </div>
+    <div class="card-body">
+
+      <div class="scenario">
+        <div class="section-label">The Scenario</div>
+        <div class="scenario-text">
+          A 34-year-old Mexican-born man has been on the caseload for three months. He is on buprenorphine and attending weekly individual counseling. He has been guarded in sessions — short answers, polite, present but distant. Two weeks ago something shifted: he told his counselor his father died of alcoholism when he was a boy, and that his biggest fear is doing the same to his own kids. He paused and said, <em>"I don't usually tell people that."</em>
+          <br><br>
+          This week he came back and acted as if that conversation never happened. Brief, surface-level, left early. His case has been flagged for clinical review — inconsistent urine screens over six weeks. There is a team staffing tomorrow where continued enrollment will be discussed. The counselor is the only person on the team who has seen what happened in that session.
+        </div>
+      </div>
+
+      <div class="prompts-toggle" onclick="togglePrompts('card-2')">
+        <span class="prompts-toggle-label">Discussion Prompts</span>
+        <span class="prompts-chevron">▶</span>
+      </div>
+
+      <div class="questions-body">
+        <div class="q-item">
+          <span class="q-num">1</span>
+          <span class="q-text">He opened something real and then closed back down. How does the team stay with him — without making him feel exposed, monitored, or like the disclosure was a mistake?</span>
+        </div>
+        <div class="q-item">
+          <span class="q-num">2</span>
+          <span class="q-text">Tomorrow's staffing will include people who have only seen his chart. What is each person's role in representing this patient's full picture in that room — and what does cultural humility ask of the team there?</span>
+        </div>
+        <div class="q-item">
+          <span class="q-num">3</span>
+          <span class="q-text">What assumptions might your group carry about what "engagement" or "progress" looks like — and how might those assumptions be shaped by culture, by his history with institutions, or by your own?</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ CARD 3 ═══ -->
+  <div class="card card-3" id="card-3">
+    <div class="card-header" onclick="toggleCard('card-3')">
+      <div class="card-accent"></div>
+      <div class="card-header-text">
+        <div class="card-label-wrap">
+          <div class="card-number">Case Study 3 of 3</div>
+          <div class="card-title">When the Tools Don't Fit</div>
+        </div>
+        <div class="toggle-icon">+</div>
+      </div>
+    </div>
+    <div class="card-body">
+
+      <div class="scenario">
+        <div class="section-label">The Scenario</div>
+        <div class="scenario-text">
+          A 29-year-old woman with OUD has been stable on MOUD for four months. She has missed two consecutive case management appointments. When reached by phone, she explains she lost her housing last month. She is staying with her sister — two adults and five children in a two-bedroom apartment. She is doing informal day labor to support her kids and is afraid to interact with government systems because of her immigration status. She needs referrals for housing, childcare, and food access. The primary resources in the network require a state ID or proof of residency. She has neither.
+          <br><br>
+          Her chart has been flagged for <em>"non-engagement."</em>
+        </div>
+      </div>
+
+      <div class="prompts-toggle" onclick="togglePrompts('card-3')">
+        <span class="prompts-toggle-label">Discussion Prompts</span>
+        <span class="prompts-chevron">▶</span>
+      </div>
+
+      <div class="questions-body">
+        <div class="q-item">
+          <span class="q-num">1</span>
+          <span class="q-text">"Non-engagement" is in her chart. What does that label do — and what does it erase about what is actually happening in her life right now?</span>
+        </div>
+        <div class="q-item">
+          <span class="q-num">2</span>
+          <span class="q-text">The tools you have don't fit her situation. What does cultural humility ask of the team when the system wasn't built for the patient in front of you?</span>
+        </div>
+        <div class="q-item">
+          <span class="q-num">3</span>
+          <span class="q-text">What would need to change — in this clinic's systems, documentation practices, or referral network — for this patient to have a genuinely different experience?</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <strong>Iván A. de la Rosa, Ph.D.</strong> &nbsp;·&nbsp; NMSU College of HEST &nbsp;·&nbsp; lilo@nmsu.edu<br>
+  La Clínica de Familia Training &nbsp;·&nbsp; June 3, 2026
+</footer>
+
+<script>
+  function toggleCard(id) {
+    const card = document.getElementById(id);
+    // closing card also closes prompts
+    if (card.classList.contains('open')) {
+      card.classList.remove('open', 'prompts-open');
+    } else {
+      card.classList.add('open');
+    }
+  }
+  function togglePrompts(cardId) {
+    document.getElementById(cardId).classList.toggle('prompts-open');
+  }
+</script>
+
+</body>
+</html>
